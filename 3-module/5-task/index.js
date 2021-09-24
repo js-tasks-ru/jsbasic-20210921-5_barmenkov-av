@@ -2,6 +2,7 @@ function getMinMax(str) {
   let result = {};
   let strToArray = str.split(' ');
   let numbers = [];
+  //let numbers = strToArray.filter(word =>!isNaN(word)); вместо цикла ниже
   for (let i = 0; i < strToArray.length; i++) {
     if (!isNaN(strToArray[i])) {
       numbers.push(strToArray[i]);
