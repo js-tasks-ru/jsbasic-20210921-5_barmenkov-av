@@ -12,72 +12,6 @@
  *      }
  *
  */
-
-//своих знаний не хватило, увы
-
-/*export default class UserTable {
-  constructor(rows) {
-    this.data = rows;
-
-  }
-
-  makeTable() {
-    const table = document.createElement('TABLE');
-    const thead = document.createElement('THEAD');
-    const tbody = document.createElement('TBODY');
-
-    thead.innerHTML = `<tr><th>Имя</th>
-    <th>Возраст</th>
-    <th>Зарплата</th>
-    <th>Город</th>
-    <th></th></tr>`;
-
-    for (let user of this.data) {
-      let tr = document.createElement('tr');
-
-      let td1 = document.createElement('td');
-      td1.innerHTML = user.name;
-      tr.appendChild(td1);
-
-      let td2 = document.createElement('td');
-      td2.innerHTML = user.age;
-      tr.appendChild(td2);
-
-      let td3 = document.createElement('td');
-      td3.innerHTML = user.salary;
-      tr.appendChild(td3);
-
-      let td4 = document.createElement('td');
-      td4.innerHTML = user.city;
-      tr.appendChild(td4);
-
-      let btn = document.createElement('button');
-      btn.innerHTML = 'X';
-      let td5 = document.createElement('td');
-      td5.appendChild(btn);
-      tr.appendChild(td5);
-
-
-      tbody.appendChild(tr);
-
-    }
-
-    table.innerHTML = `${thead.innerHTML}${tbody.innerHTML}`;
-
-    table.addEventListener('click', function (event) {
-    event.target.closest('tr').remove()
-
-  });
-
-
-
-return table;
-};
-
-get elem() {
-  return this.makeTable();
-}
-}*/
 export default class UserTable {
   constructor(rows) {
     this.elem = document.createElement('table');
@@ -120,10 +54,8 @@ export default class UserTable {
     if (event.target.tagName != 'BUTTON') {
       return;
     }
-
-    let tr = event.target.closest('tr');
-
-    tr.remove();
+    //let tr = event.target.closest('tr');
+    event.target.closest('tr').remove();
   }
 
 }
