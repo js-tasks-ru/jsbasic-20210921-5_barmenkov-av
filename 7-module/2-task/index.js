@@ -2,10 +2,6 @@ import createElement from '../../assets/lib/create-element.js';
 export default class Modal {
   constructor() {
     this.render();
-<<<<<<< HEAD
-=======
-
->>>>>>> b7118edfcd2249766b1ed6fba97a52a3d1617d22
     this.elem.addEventListener('click', (event) => this.onClick(event));
   }
 
@@ -26,13 +22,6 @@ export default class Modal {
     `);
   }
 
-<<<<<<< HEAD
-=======
-  sub(ref) {
-    return this.elem.querySelector(`.modal__${ref}`);
-  }
-
->>>>>>> b7118edfcd2249766b1ed6fba97a52a3d1617d22
   open() {
     document.body.append(this.elem);
     document.body.classList.add('is-modal-open');
@@ -60,7 +49,6 @@ export default class Modal {
   }
 
   setTitle(title) {
-<<<<<<< HEAD
     let titleElem = this.elem.querySelector('.modal__title');
     titleElem.textContent = title;
   }
@@ -69,14 +57,6 @@ export default class Modal {
     let modalBody = this.elem.querySelector('.modal__body');
     modalBody.innerHTML = '';
     modalBody.append(node);
-=======
-    this.sub('title').textContent = title;
-  }
-
-  setBody(node) {
-    this.sub('body').innerHTML = '';
-    this.sub('body').append(node);
->>>>>>> b7118edfcd2249766b1ed6fba97a52a3d1617d22
   }
 
   close() {
