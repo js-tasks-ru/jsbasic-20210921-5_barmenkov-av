@@ -32,7 +32,7 @@ export default class RibbonMenu {
     this.sub('inner').lastElementChild.dataset.id = this.sub('inner').lastElementChild.dataset.id + ' ' + 'ribbon__item_active';
 
   }
-// свои попытки
+  // свои попытки
   /*sub(ref) {
     return this.elem.querySelector(`.ribbon__${ref}`);
   }
