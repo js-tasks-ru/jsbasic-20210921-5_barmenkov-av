@@ -165,4 +165,29 @@ export default class RibbonMenu {
       this.sub('arrow_right').classList.remove('ribbon__arrow_visible');
     }
   }
+
+  scrollRight() {
+    return this.sub('inner').scrollWidth - (this.sub('inner').scrollLeft + this.sub('inner').clientWidth);
+  }
+
+  scrollLeft() {
+    return this.sub('inner').scrollLeft;
+  }
+
+  updateArrows() {
+    if (this.scrollLeft() > 0) {
+      this.sub('arrow_left').classList.add('ribbon__arrow_visible');
+    } else {
+      this.sub('arrow_left').classList.remove('ribbon__arrow_visible');
+    }
+
+    let scrollRight = this.scrollRight();
+    scrollRight = scrollRight < 1 ? 0 : scrollRight; // Это нужно для ситуации, когда скролл произошел с погрешностью
+    if (scrollRight > 0) {
+      this.sub('arrow_right').classList.add('ribbon__arrow_visible');
+    } else {
+      this.sub('arrow_right').classList.remove('ribbon__arrow_visible');
+    }
+  }
+
 }
