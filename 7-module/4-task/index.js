@@ -1,7 +1,10 @@
 import createElement from '../../assets/lib/create-element.js';
 
 export default class StepSlider {
-  constructor({ steps, value = 0 }) {
+  constructor({
+    steps,
+    value = 0
+  }) {
     this.steps = steps;
     this.segments = steps - 1;
     this.render();
@@ -97,8 +100,12 @@ export default class StepSlider {
   calcLeftByEvent(event) {
     let newLeft = (event.clientX - this.elem.getBoundingClientRect().left) / this.elem.offsetWidth;
 
-    if (newLeft < 0) { newLeft = 0; }
-    if (newLeft > 1) { newLeft = 1; }
+    if (newLeft < 0) {
+      newLeft = 0;
+    }
+    if (newLeft > 1) {
+      newLeft = 1;
+    }
 
     return newLeft;
   }
